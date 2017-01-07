@@ -92,6 +92,7 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 	if err != nil {
 		return nil, err
 	}
+	stub.PutState("hello_more", []byte("Hello more"))
 	return nil, nil
 }
 
